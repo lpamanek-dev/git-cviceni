@@ -5,5 +5,6 @@ SELECT
     COUNT(*)                         AS pocet_objednavek,
     ROUND(SUM(o_totalprice), 0)      AS obrat
 FROM samples.tpch.orders
+WHERE o_orderstatus = 'F'
 GROUP BY 1
 ORDER BY 1;
